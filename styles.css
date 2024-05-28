@@ -22,12 +22,16 @@ html {
 body {
   background-color: var(--Light-Grayish-Blue);
 }
+.container {
+  position: relative;
+}
 article {
   background-color: white;
   margin: 6rem 2rem;
   border-radius: var(--size);
   overflow: hidden;
   position: relative;
+  box-shadow: 3px 30px 40px -7px hsla(214, 17%, 51%, 0.14);
 }
 img {
   width: 100%;
@@ -45,6 +49,7 @@ img {
 .article-title {
   color: var(--Very-Dark-Grayish-Blue);
   font-size: 1.25rem;
+  font-weight: 800;
 }
 .article-content {
   color: var(--Desaturated-Dark-Blue);
@@ -84,6 +89,10 @@ img {
   color: var(--Grayish-Blue);
 }
 .share-icon-container {
+  border: none;
+  outline-offset: 0;
+  outline: 2px solid transparent;
+  cursor: pointer;
   grid-area: shareIcon;
   background-color: var(--Light-Grayish-Blue);
   height: 2.5rem;
@@ -93,8 +102,25 @@ img {
   align-items: center;
   justify-content: center;
   justify-self: flex-end;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+}
+.share-icon-container:active {
+  animation-name: animateOutline;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-fill-mode: forwards;
+}
+@keyframes animateOutline {
+  0% {
+    outline-color: transparent;
+  }
+  50% {
+    outline-color: var(--Grayish-Blue);
+    outline-offset: 7px;
+  }
+  100% {
+    outline-color: transparent;
+    outline-offset: 0;
+  }
 }
 .share-icon {
   width: 1.15rem;
@@ -116,9 +142,11 @@ img {
   padding: 0 2.5rem;
   display: flex;
   align-items: center;
+  opacity: 0;
   transition: all 0.3s ease-in-out;
 }
 .share-content-up {
+  opacity: 1;
   bottom: 0;
 }
 .social-media-wrapper {
@@ -129,7 +157,7 @@ img {
 .social-media-wrapper span {
   text-transform: uppercase;
   color: var(--Grayish-Blue);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 0.4rem;
 }
 .social-links {
@@ -147,4 +175,88 @@ img {
 }
 .social-links ul li a {
   display: block;
+}
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: grid;
+  }
+  .container {
+    align-self: center;
+    justify-self: center;
+  }
+  article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .article-container {
+    grid-template-rows: repeat(2, auto);
+    padding-bottom: 2.5rem;
+    row-gap: 1rem;
+    row-gap: 1.3rem;
+  }
+  .article-content,
+  .article-footer {
+    margin-top: 0;
+  }
+  .article-image {
+    height: 100%;
+  }
+  .article-image img {
+    width: 123%;
+    height: 100%;
+  }
+  .article-title {
+    font-size: 1.7rem;
+    height: 100%;
+    overflow-y: hidden;
+  }
+  .article-content {
+    line-height: 1.7rem;
+  }
+
+  .author-info {
+    width: 15.3rem;
+  }
+  .share-content {
+    border-radius: 1rem;
+    width: 19rem;
+    bottom: 6.5rem;
+    height: 5rem;
+    right: 2.3rem;
+    left: auto;
+    opacity: 0;
+  }
+  .share-content::after {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    background-color: inherit;
+    bottom: -6px;
+    right: 1rem;
+    transform: rotate(45deg);
+  }
+  .share-content-up {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    align-self: center;
+    width: 72.5rem;
+  }
+  article {
+    position: initial;
+    width: 56.25rem;
+    margin: auto;
+  }
+  .article-image img {
+    height: 100%;
+  }
+  .share-content::after {
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
 }
