@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Article preview component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -16,51 +15,54 @@
     <figure class="article-image">
       <img src="./images/drawers.jpg" alt="drawers imgage">
     </figure>
-    <h1 class="article-title">Shift the overall look and feel by adding these wonderful
-      touches to furniture in your home</h1>
-    <p class="article-content">Ever been in a room and felt like something was missing? Perhaps
-      it felt slightly bare and uninviting. I’ve got some simple tips
-      to help you make any room feel complete.</p>
-    <div class="article-footer">
-      <div class="author-info">
-        <img src="./images/avatar-michelle.jpg" alt="avatar Michelle">
-        <p>
-          <span class="author-name">Michelle Appleton</span>
-          <span class="author-date-post">28 Jun 2020</span>
-        </p>
-      </div>
-      <div class="share-content">
-        <img class="share icon" src="./images/icon-share.svg" alt="share icon">
-        <div class="social-media-wrapper">
-          <span>Share</span>
-          <nav class="social-links">
-            <ul>
-              <li>
-                <a href="./index.html" title="facebook link">
-                  <img src="./images/icon-facebook.svg" alt="facebook icon">
-                </a>
-              </li>
-              <li>
-                <a href="./index.html" title="twitter link">
-                  <img src="./images/icon-twitter.svg" alt="twitter icon">
-                </a>
-              </li>
-              <li>
-                <a href="./index.html" title="pinterest link">
-                  <img src="./images/icon-pinterest.svg" alt="pinterest icon">
-                </a>
-              </li>
-            </ul>
-          </nav>
+    <div class="article-container">
+      <h1 class="article-title">Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home</h1>
+      <p class="article-content">Ever been in a room and felt like something was missing? Perhaps
+        it felt slightly bare and uninviting. I’ve got some simple tips
+        to help you make any room feel complete.</p>
+      <div class="article-footer">
+        <div class="author-info">
+          <img src="./images/avatar-michelle.jpg" alt="avatar Michelle">
+          <p>
+            <span class="author-name">Michelle Appleton</span>
+            <span class="author-date-post">28 Jun 2020</span>
+          </p>
+        </div>
+        <div class="share-icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" class="share-icon">
+            <path fill="#6E8098"
+              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+          </svg>
         </div>
       </div>
     </div>
+    <div class="share-content">
+      <div class="social-media-wrapper">
+        <span>Share</span>
+        <nav class="social-links">
+          <ul>
+            <li>
+              <a href="./index.html" title="facebook link">
+                <img src="./images/icon-facebook.svg" alt="facebook icon">
+              </a>
+            </li>
+            <li>
+              <a href="./index.html" title="twitter link">
+                <img src="./images/icon-twitter.svg" alt="twitter icon">
+              </a>
+            </li>
+            <li>
+              <a href="./index.html" title="pinterest link">
+                <img src="./images/icon-pinterest.svg" alt="pinterest icon">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </article>
-
-
-
-
-
+  <script src="./index.js"></script>
 </body>
 
 </html>
