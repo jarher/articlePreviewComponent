@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [ https://jarher.github.io/articlePreviewComponent/]
+- Solution URL: [https://www.frontendmentor.io/solutions/article-preview-component-html-css-js-LbYi98aEBt]
+- Live Site URL: [https://jarher.github.io/articlePreviewComponent/]
 
 ## My process
 
